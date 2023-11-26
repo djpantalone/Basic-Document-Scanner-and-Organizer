@@ -1,6 +1,8 @@
 
 # Document Scanner and Organizer Prototype
 
+Turns your paper documents into PDF files. Upload an image of a document, and the app will enhance its readability. Text is extracted using OCR to categorize the document.
+
 ## Installation
 
 1. Ensure you have Python installed on your system.
@@ -12,15 +14,9 @@ pip install -r requirements.txt
 
 ## Running the Prototype
 
-To run the prototype, execute the main script (once you have created it) from your terminal. For example:
-
 ```bash
 python main.py
 ```
 
 
-## Usage
 
-1. Upload the image of the document through the interface provided by the script.
-2. Wait for the prototype to process the image, which includes correcting the perspective, enhancing the image, converting it to PDF, and performing basic OCR.
-3. The script will output the processed PDF and the OCR text result.
