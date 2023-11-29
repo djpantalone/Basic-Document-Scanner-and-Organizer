@@ -123,16 +123,18 @@ def categorize_text(text):
 
 
 if __name__ == '__main__':
-    
-    image_path = input("Enter a img path: ")
-    text = run_ocr_on_image(image_path)
+    try:
+        # Ask the user for an image file path
+        image_path = input("Enter the path to an image file: ")
+        
+        # Run OCR on the specified image
+        text = run_ocr_on_image(image_path)
 
+        # Categorize the text
+        categorized_tokens = categorize_text(text)
+        print("Category:", categorized_tokens)
 
-    # Categorize the text
-    categorized_tokens = categorize_text(text)
-    print("Category:", categorized_tokens)
-
-
-    
-
-   
+    except FileNotFoundError:
+        print("Error: The specified image file was not found.")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
