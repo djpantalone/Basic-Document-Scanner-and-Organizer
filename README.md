@@ -11,6 +11,14 @@ Turns your paper documents into PDF files. Upload an image of a document, and th
 4. Add a path variable "C:\Program Files\Tesseract-OCR".
 
 ```bash
+
+python -m venv venv
+.\venv\Scripts\activate  # On Windows
+source venv/bin/activate # On Unix or MacOS
+
+```
+
+```bash
 pip install -r requirements.txt
 ```
 

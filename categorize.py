@@ -1,13 +1,22 @@
 def categorize_text(text, categories):
     category_results = {}
+    if text is None:
+        return {category: False for category in categories}
+
+    # Convert the text to lowercase
+    text = text.lower()
+
     for category, keywords in categories.items():
-        if any(keyword in text for keyword in keywords):
-            category_results[category] = True
-        else:
-            category_results[category] = False
+        # Convert each keyword to lowercase and check if it's in the lowercase text
+        matching_keywords = [keyword for keyword in keywords if keyword.lower() in text]
+        category_results[category] = bool(matching_keywords)
+        print(f"Category: {category}, Matching Keywords: {matching_keywords}")
+
     return category_results
 
-# Example usage
+
+
+
 categories = {
     'Invoice': ['invoice', 'total amount', 'due date'],
     'Receipt': ['receipt', 'purchase', 'subtotal'],
