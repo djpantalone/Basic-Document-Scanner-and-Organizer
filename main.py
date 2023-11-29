@@ -97,8 +97,11 @@ def categorize_text(text):
         'Financial Report': ['financial report', 'financial analysis', 'quarterly earnings'],
         'Technical Specification': ['technical specification', 'specification document', 'product details'],
         'Marketing Brochure': ['marketing brochure', 'product brochure', 'marketing materials'],
-        'Travel Itinerary': ['travel itinerary', 'trip details', 'travel plans']
+        'Travel Itinerary': ['travel itinerary', 'trip details', 'travel plans'],
+        'Other': []  # Add an "Other" category for unrecognized text
     }
+
+
 
 
 
