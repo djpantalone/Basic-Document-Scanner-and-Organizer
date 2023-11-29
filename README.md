@@ -1,7 +1,7 @@
 
 # Document Scanner and Organizer Prototype
 
-Turns your paper documents into PDF files. Upload an image of a document, and the app will enhance its readability. Text is extracted using OCR to categorize the document.
+Upload an image of a document, and the app will enhance its readability. Text is extracted using OCR to categorize the document.
 
 ## Installation
 
