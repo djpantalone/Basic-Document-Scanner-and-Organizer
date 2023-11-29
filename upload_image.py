@@ -9,7 +9,7 @@ def upload_image():
             try:
                 with Image.open(file_path) as img:
                     print(f"Successfully uploaded {file_path}")
-                    break
+                    return file_path  
                 
             except IOError:
                 print("The file is not a valid image. Please try again.")
