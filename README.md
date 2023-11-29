@@ -13,10 +13,19 @@ Turns your paper documents into PDF files. Upload an image of a document, and th
 ```bash
 
 python -m venv venv
-.\venv\Scripts\activate  # On Windows
-source venv/bin/activate # On Unix or MacOS
-
 ```
+# Windows
+```bash
+.\venv\Scripts\activate  
+```
+
+# Unix or MacOS
+```
+source venv/bin/activate 
+```
+
+
+
 
 ```bash
 python -m spacy download en_core_web_sm
