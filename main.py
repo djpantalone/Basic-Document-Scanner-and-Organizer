@@ -2,6 +2,8 @@ from PIL import Image
 import pytesseract
 import cv2
 import os
+from collections import Counter
+import re
 
 def preprocess_image_for_ocr(input_image, method="threshold"):
     """
@@ -55,17 +57,66 @@ def run_ocr_on_image(image_path, preprocess_method="threshold"):
 
     # Extract text using OCR
     text = extract_text_from_image(preprocessed_image_file)
-
     print("Extracted Text:")
     print(text)
+    return text
 
-def main(image_path):
-    # Run OCR on the specified image
-    extracted_text = run_ocr_on_image(image_path)
+def categorize_text(text):
+    # Define categories and their associated keywords
+    categories = {
+        'Invoice': ['invoice', 'total amount', 'due'],
+        'Receipt': ['receipt', 'total amount', 'paid'],
+        'Resume': ['resume', 'qualifications', 'work experience'],
+        'Contract': ['contract', 'terms and conditions', 'agreement'],
+        'Recipe': ['recipe', 'make', 'delicious'],
+        'News Article': ['news', 'latest news', 'economy'],
+        'Novel': ['novel', 'detective', 'reading'],
+        'Poem': ['poem', 'love', 'nature'],
+        'Scientific Paper': ['scientific paper', 'research', 'results'],
+        'User Manual': ['user manual', 'instructions', 'product'],
+        'Email': ['email', 'colleague', 'meeting'],
+        'Legal Document': ['legal document', 'contract details'],
+        'Travel Guide': ['travel guide', 'tourist attractions'],
+        'Presentation': ['presentation', 'conference'],
+        'Blog Post': ['blog post', 'healthy eating'],
+        'Medical Report': ['medical report', 'test results'],
+        'Speech': ['speech', 'president', 'powerful'],
+        'Financial Statement': ['financial statement', 'company profits'],
+        'Research Paper': ['research paper', 'climate change'],
+        'Magazine Article': ['magazine article', 'fashion trends']
+    }
 
-   
-    
+    # Initialize category counts
+    category_counts = {category: 0 for category in categories}
+
+    # Tokenize the text and convert to lowercase
+    tokens = re.findall(r'\b\w+\b', text.lower())
+
+    # Iterate through tokens and categorize
+    for token in tokens:
+        for category, keywords in categories.items():
+            if any(keyword in token for keyword in keywords):
+                category_counts[category] += 1
+
+    # Determine the category with the highest count
+    max_category = max(category_counts, key=category_counts.get)
+
+    return max_category
+
+
+
 
 if __name__ == '__main__':
-    image_file_path = "invoice.png"
-    main(image_file_path)
+    
+    image_path = input("Enter a img path: ")
+    text = run_ocr_on_image(image_path)
+
+
+    # Categorize the text
+    categorized_tokens = categorize_text(text)
+    print("Category:", categorized_tokens)
+
+
+    
+
+   
