@@ -124,8 +124,12 @@ def categorize_text(text):
 
 if __name__ == '__main__':
     try:
-        # Ask the user for an image file path
-        image_path = input("Enter the path to an image file: ")
+        # Ask the user for an image file path or provide an option for the default file
+        image_path = input("Enter the path to an image file (or press Enter for default - invoice.png): ").strip()
+
+        if not image_path:
+            # If the user presses Enter without providing a path, use the default file
+            image_path = "invoice.png"
         
         # Run OCR on the specified image
         text = run_ocr_on_image(image_path)
