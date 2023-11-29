@@ -10,8 +10,8 @@ Turns your paper documents into PDF files. Upload an image of a document, and th
 3. Download tesseract exe from https://github.com/UB-Mannheim/tesseract/wiki and run.
 4. Add a path variable "C:\Program Files\Tesseract-OCR".
 
+# Activate a virtual environment
 ```bash
-
 python -m venv venv
 ```
 # Windows
