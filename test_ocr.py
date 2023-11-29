@@ -1,7 +1,5 @@
 import pytest
-from categorize import categorize_text, categories  
-from main import run_ocr_on_image  # Import from main.py
-
+from main import run_ocr_on_image  
 test_data = [
     ("invoice.png", 'invoice'),
 ]

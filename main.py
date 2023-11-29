@@ -59,6 +59,13 @@ def run_ocr_on_image(image_path, preprocess_method="threshold"):
     print("Extracted Text:")
     print(text)
 
+def main(image_path):
+    # Run OCR on the specified image
+    extracted_text = run_ocr_on_image(image_path)
+
+   
+    
+
 if __name__ == '__main__':
-    image_file_path = "C:\\Users\\willi\\Downloads\\1701285527.png"
-    run_ocr_on_image(image_file_path)
+    image_file_path = "invoice.png"
+    main(image_file_path)
