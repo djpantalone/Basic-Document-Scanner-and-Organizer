@@ -19,6 +19,10 @@ source venv/bin/activate # On Unix or MacOS
 ```
 
 ```bash
+python -m spacy download en_core_web_sm
+```
+
+```bash
 pip install -r requirements.txt
 ```
 
