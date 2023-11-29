@@ -3,7 +3,6 @@ import pytesseract
 import cv2
 import os
 from collections import Counter
-import re
 import spacy
 from spacy.pipeline.ner import EntityRecognizer
 
@@ -84,12 +83,6 @@ def categorize_text(input_text):
     most_common_category = category_counts.most_common(1)[0][0]
 
     return most_common_category
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
