@@ -76,7 +76,6 @@ def categorize_text(input_text):
     # Print the categories
     print("Categories:", categories)
 
-    # List of extracted categories
 
     # Create a Counter to count the occurrences of each category
     category_counts = Counter(categories)
