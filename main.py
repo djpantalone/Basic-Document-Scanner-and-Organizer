@@ -83,8 +83,23 @@ def categorize_text(text):
         'Public Speech Transcript': ['public speech transcript', 'presidential speech', 'powerful address'],
         'Financial Statement': ['financial statement', 'company financials', 'profit and loss report'],
         'Academic Research Paper': ['academic research paper', 'study on climate change', 'research findings'],
-        'Magazine Feature Article': ['magazine feature article', 'fashion trends feature', 'magazine publication']
+        'Magazine Feature Article': ['magazine feature article', 'fashion trends feature', 'magazine publication'],
+        'Meeting Minutes': ['meeting minutes', 'meeting notes', 'agenda items'],
+        'Job Application': ['job application', 'cover letter', 'resume submission'],
+        'Technical Manual': ['technical manual', 'technical instructions', 'troubleshooting guide'],
+        'Customer Review': ['customer review', 'product review', 'feedback'],
+        'Survey Questionnaire': ['survey questionnaire', 'survey form', 'response analysis'],
+        'Legal Brief': ['legal brief', 'legal argument', 'case analysis'],
+        'Business Proposal': ['business proposal', 'business plan', 'investment pitch'],
+        'Academic Thesis': ['academic thesis', 'research thesis', 'dissertation'],
+        'Health Report': ['health report', 'medical checkup', 'health diagnosis'],
+        'Event Invitation': ['event invitation', 'event details', 'RSVP'],
+        'Financial Report': ['financial report', 'financial analysis', 'quarterly earnings'],
+        'Technical Specification': ['technical specification', 'specification document', 'product details'],
+        'Marketing Brochure': ['marketing brochure', 'product brochure', 'marketing materials'],
+        'Travel Itinerary': ['travel itinerary', 'trip details', 'travel plans']
     }
+
 
 
     # Initialize category counts
