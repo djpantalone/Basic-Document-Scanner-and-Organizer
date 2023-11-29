@@ -1,4 +1,4 @@
 opencv-python
 Pillow
-PyPDF2
+os
 pytesseract
