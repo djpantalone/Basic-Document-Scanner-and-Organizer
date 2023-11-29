@@ -5,10 +5,11 @@ Turns your paper documents into PDF files. Upload an image of a document, and th
 
 ## Installation
 
+# Install Tesseract
+
 1. Ensure you have Python installed on your system.
-2. Install the required Python libraries by running the following command in your terminal:
-3. Download tesseract exe from https://github.com/UB-Mannheim/tesseract/wiki and run.
-4. Add a path variable "C:\Program Files\Tesseract-OCR".
+2. Download tesseract exe from https://github.com/UB-Mannheim/tesseract/wiki and run.
+3. Add a path variable "C:\Program Files\Tesseract-OCR".
 
 # Create a virtual environment
 ```bash
