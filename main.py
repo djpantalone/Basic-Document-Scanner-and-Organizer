@@ -64,27 +64,28 @@ def run_ocr_on_image(image_path, preprocess_method="threshold"):
 def categorize_text(text):
     # Define categories and their associated keywords
     categories = {
-        'Invoice': ['invoice', 'total amount', 'due'],
-        'Receipt': ['receipt', 'total amount', 'paid'],
-        'Resume': ['resume', 'qualifications', 'work experience'],
-        'Contract': ['contract', 'terms and conditions', 'agreement'],
-        'Recipe': ['recipe', 'make', 'delicious'],
-        'News Article': ['news', 'latest news', 'economy'],
-        'Novel': ['novel', 'detective', 'reading'],
-        'Poem': ['poem', 'love', 'nature'],
-        'Scientific Paper': ['scientific paper', 'research', 'results'],
-        'User Manual': ['user manual', 'instructions', 'product'],
-        'Email': ['email', 'colleague', 'meeting'],
-        'Legal Document': ['legal document', 'contract details'],
-        'Travel Guide': ['travel guide', 'tourist attractions'],
-        'Presentation': ['presentation', 'conference'],
-        'Blog Post': ['blog post', 'healthy eating'],
-        'Medical Report': ['medical report', 'test results'],
-        'Speech': ['speech', 'president', 'powerful'],
-        'Financial Statement': ['financial statement', 'company profits'],
-        'Research Paper': ['research paper', 'climate change'],
-        'Magazine Article': ['magazine article', 'fashion trends']
+        'Financial Invoice': ['invoice', 'billing statement', 'total amount', 'amount due'],
+        'Purchase Receipt': ['purchase receipt', 'grocery receipt', 'total amount', 'amount paid'],
+        'Professional Resume': ['professional resume', 'qualifications', 'work experience', 'career summary'],
+        'Legal Contract': ['legal contract', 'contractual terms', 'conditions of agreement'],
+        'Cooking Recipe': ['cooking recipe', 'culinary instructions', 'delicious preparation'],
+        'Current News Article': ['current news article', 'latest news', 'economic report'],
+        'Fictional Novel': ['fictional novel', 'detective story', 'enthralling reading'],
+        'Poetry Collection': ['poetry collection', 'love poems', 'nature verses'],
+        'Scientific Research Paper': ['scientific research paper', 'academic research', 'experimental results'],
+        'Product User Manual': ['product user manual', 'instruction booklet', 'product guide'],
+        'Email Correspondence': ['email correspondence', 'colleague communication', 'meeting notification'],
+        'Legal Documentation': ['legal documentation', 'contract details', 'legal agreement'],
+        'Travel Guidebook': ['travel guidebook', 'tourist attractions', 'travel recommendations'],
+        'Presentation Slides': ['presentation slides', 'conference presentation', 'visual aids'],
+        'Blog Post Article': ['blog post article', 'health and wellness blog', 'informative article'],
+        'Medical Report': ['medical report', 'health assessment', 'test results'],
+        'Public Speech Transcript': ['public speech transcript', 'presidential speech', 'powerful address'],
+        'Financial Statement': ['financial statement', 'company financials', 'profit and loss report'],
+        'Academic Research Paper': ['academic research paper', 'study on climate change', 'research findings'],
+        'Magazine Feature Article': ['magazine feature article', 'fashion trends feature', 'magazine publication']
     }
+
 
     # Initialize category counts
     category_counts = {category: 0 for category in categories}
