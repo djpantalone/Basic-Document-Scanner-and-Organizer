@@ -10,6 +10,7 @@ Upload an image of a document, and then text is extracted using OCR to categoriz
 1. Ensure you have Python installed on your system.
 2. Download tesseract exe from https://github.com/UB-Mannheim/tesseract/wiki and run.
 3. Add a path variable "C:\Program Files\Tesseract-OCR".
+4. Restart Computer.
 
 ## Create a virtual environment
 ```bash
