@@ -29,16 +29,17 @@ python -m venv venv
 source venv/bin/activate 
 ```
 
+## Install the required Python libraries
+```bash
+pip install -r requirements.txt
+```
 
 ## Download a specific spaCy language model.
 ```bash
 python -m spacy download en_core_web_sm
 ```
 
-## Install the required Python libraries
-```bash
-pip install -r requirements.txt
-```
+
 
 ## Running the Prototype
 ```bash
